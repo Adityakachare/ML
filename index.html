@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Classification and Prediction</title>
+    <link rel="stylesheet" href="hstyles.css">
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <p class="navbar-brand" style="font-size: 30px;">Disease Classification and Prediction</p>
+        <div class="navbar-right">
+            <a href="index.html" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact Us</a>
+            <a href="brain.html">Brain</a>
+            <a href="lung.html">Lung</a>
+            <a href="chest.html">Chest</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Left Container for Paragraph 1 -->
+        <div class="container-left">
+            <p>
+                Machine learning (ML) predictions in the medical field have revolutionized healthcare by leveraging
+                algorithms to analyze vast amounts of data and make accurate predictions. By training models on medical
+                imaging data such as X-rays, MRIs, and CT scans, ML algorithms can detect patterns and anomalies that
+                may be imperceptible to the human eye. These predictions aid in early disease detection, allowing for
+                timely interventions and improved patient outcomes. Moreover, ML algorithms are continually learning
+                and adapting, refining their predictions over time as they encounter new data, thus enhancing their
+                effectiveness in medical diagnosis and prognosis. ML predictions have opened new avenues for research
+                and development in medical technology.
+            </p>
+        </div>
+        <!-- Slideshow Container -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="image1.jpg" style="width:100%">
+                <div class="text">Chest</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="image2.jpg" style="width:100%">
+                <div class="text">Lung</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="image3.jpg" style="width:100%">
+                <div class="text">Brain Tumor</div>
+            </div>
+        </div>
+        <!-- Right Container for Paragraph 2 -->
+        <div class="container-right">
+            <p>
+                Furthermore, ML predictions empower personalized medicine by tailoring treatments to individual
+                patients based on their unique characteristics and medical history. By analyzing diverse datasets
+                encompassing genetic profiles, lifestyle factors, and treatment responses, ML algorithms can identify
+                optimal treatment regimens for specific patient populations, leading to more targeted and effective
+                healthcare interventions. Additionally, ML predictions facilitate predictive analytics in healthcare
+                management, enabling hospitals and healthcare providers to anticipate patient needs, optimize resource
+                allocation, and enhance operational efficiency, ultimately leading to better patient care and healthcare
+                outcomes.
+            </p>
+        </div>
+    </div>
+
+    <!-- The Grid -->
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="image4.jpeg" alt="Image" style="width:100%">
+        </div>
+        <div class="grid-item">
+            <img src="image5.jpeg" alt="Image" style="width:100%">
+        </div>
+        <div class="grid-item">
+            <img src="image6.jpeg" alt="Image" style="width:100%">
+        </div>
+    </div>
+    <section id="about">
+        <div class="about-container">
+            <h1>About Us</h1>
+
+            <p class="contenta">Welcome to our website dedicated to revolutionizing healthcare through advanced machine
+                learning techniques.
+            </p>
+
+            <p class="contenta">At <strong>VIT</strong>, we are committed to leveraging cutting-edge machine learning
+                algorithms to analyze medical imaging data such as X-rays, MRIs, and CT scans. Our primary goal is to
+                enhance
+                disease
+                classification and prediction, enabling early detection and precise diagnosis of various medical
+                conditions,
+                including tumors and other defects.</p>
+
+            <div class="key-features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Precision disease classification and prediction using machine learning techniques.</li>
+                    <li>Analyze medical imaging data such as X-rays, MRIs, and CT scans.</li>
+                    <li>Early detection of diseases and anomalies.</li>
+                    <li>Accurate diagnosis for improved patient outcomes.</li>
+                </ul>
+            </div>
+
+            <div class="vision-mission">
+                <h2>Vision & Mission</h2>
+                <p class="contenta">Our vision is to transform healthcare through the power of artificial intelligence
+                    and machine
+                    learning,
+                    providing healthcare professionals with valuable insights to assist in clinical decision-making.</p>
+                <p class="contenta">Our mission is to advance the field of medical imaging and improve patient outcomes
+                    through
+                    innovative
+                    technology.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+
+                    <h1 class="subtitle">Contact Us</h1>
+
+
+
+                    <div class="contact_right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btnsuccess">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script>
+
+        // Smooth scrolling function
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth",
+                });
+            });
+        });
+
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        const scriptURL =
+            "https://docs.google.com/spreadsheets/d/1ZYK6vJlBQfuxs3Lc_qN-1gKlBJHOLUI9DG4dEnlENZ8/edit?usp=sharing";
+        const form = document.forms["submit-to-google-sheet"];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                .then((response) => {
+                    msg.innerHTML = "Message sent successfully";
+                    setTimeout(function () {
+                        msg.innerHTML = "";
+                    }, 5000);
+                    form.reset();
+                })
+
+                .catch((error) => console.error("Error!", error.message));
+        });
+
+    </script>
+
+
+</body>
+
+</html>

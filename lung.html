@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification and Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <p class="navbar-brand" style="font-size: 30px;">Disease Classification and Prediction</p>
+        <div class="navbar-right">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact Us</a>
+            <a href="brain.html">Brain</a>
+            <a href="lung.html" class="active">Lung</a>
+            <a href="chest.html">Chest</a>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <div class="container">
+            <h1 class="text-center">Lung </h1>
+            <!-- Wrapped "Choose file" section in a div with green background and padding -->
+            <div class="bg-success p-3 rounded green-div">
+                <div class="form-group c">
+                    <input type="file" class="form-control-file" id="fileInput">
+                </div>
+            </div>
+            <div class="image-preview">
+                <img src="img.JPG" alt="Default Image">
+            </div>
+            <div class="form-group">
+                <label class="result-label text-left">Result:</label> <!-- Added text-left class here -->
+                <span id="result"></span>
+            </div>
+            <button onclick="downloadStaticPDF()" class="pdfbutton">Download Report</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
